@@ -1,0 +1,13 @@
+The ou-cs-hci in this zip corrects a few issues in the codebase that you are likely to encounter as you implement the various TODOs.
+
+If you haven't already started the assignment, just use this version of the zip.
+
+If you have already started, make the following changes to your ou-cs-hci:
+
+* build.gradle: Just copy the file over. (The new one uncomments the Apache Commons CSV dependency and updates it from version 1.7 instead of 1.8.)
+
+* Resources.java: Just copy the file over. (The new one updates getCSVData() to properly handle commas inside quoted fields, using the Apache Commons CSV library.)
+
+* EditorPane.java: On line 252, change the cast from Double to Integer. On line 541, cast the result of Math.floor() to an int. I also clarified the TODO #3 comment on line 341.
+
+* CollectionPane.java: Make all of the CellFactory and Cell inner classes NON-static. This will let you refer to the data members of CollectionPane (gdata, rdata, mdata, movies) inside those classes.
